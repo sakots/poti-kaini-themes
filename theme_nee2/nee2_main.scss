@@ -119,6 +119,13 @@ em.thispage {
 	margin-right: 0.8ex;
 }
 
+.name {
+	border: 1px solid $button;
+	a {
+		text-decoration: none;
+	}
+}
+
 figure {
 	float: left;
 	margin-right: 8px;
