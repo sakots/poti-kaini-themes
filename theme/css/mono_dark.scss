@@ -167,6 +167,7 @@ em.thispage {
 h2 {
 	border-left: solid 1ex $border;
 	background-color: $th_bg;
+	padding-left: 5px;
 }
 h3 {
 	padding-left: 1ex;
@@ -444,7 +445,8 @@ ul.menu {
 	}
 	
 	.name a {
-		color: #003;
+		color: #FFF;
+		// color: #003;
 		display: block;
 		padding: 5px;
 	}
@@ -489,7 +491,7 @@ ul.menu {
 	.comments_title_wrap {
 		display: block;
 		line-height: 2em;
-		margin: 0 0 5px;
+		margin: 8px 0 5px;
 	}
 	
 	h2 {
@@ -497,6 +499,11 @@ ul.menu {
 		font-size: 16px;
 		display: inline-block;
 		margin: 0 0 8px;
+		background-color: inherit;
+	}
+
+	.s_foot{
+		margin: 8px 0 0;
 	}
 	
 	input[type=text]:hover {
