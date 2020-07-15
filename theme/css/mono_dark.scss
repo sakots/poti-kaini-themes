@@ -146,11 +146,23 @@ em.thispage {
 }
 
 .name {
-	border: solid 1px $button;
-	a {
-		text-decoration: none;
-	}
+    border: solid 1px $button;
+    border-radius: 5px;
+    padding: 3px;
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+    a:hover {
+        color: $link_visited;
+    }
+    
 }
+.name:hover {
+    background-color: $ushiro;
+}
+
 
 h2 {
 	border-left: solid 1ex $border;
