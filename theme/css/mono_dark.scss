@@ -148,11 +148,11 @@ em.thispage {
 .name {
     border: solid 1px $button;
     border-radius: 5px;
-    padding: 3px;
-
+	display: inline-block;
     a {
-        text-decoration: none;
-        display: inline-block;
+		text-decoration: none;
+        display: block;
+		padding: 3px;
     }
     a:hover {
         color: $link_visited;
