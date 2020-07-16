@@ -146,19 +146,22 @@ em.thispage {
 }
 
 .name {
+	line-height: 1em;
     border: solid 1px $button;
     border-radius: 5px;
 	display: inline-block;
     a {
 		text-decoration: none;
         display: block;
-		padding: 3px;
+		padding: 5px;
+		color: inherit;
     }
-    a:hover {
-        color: $link_visited;
-    }
-    
 }
+
+.name:hover {
+    background-color: $ushiro;
+}
+
 .name:hover {
     background-color: $ushiro;
 }
@@ -170,7 +173,7 @@ h2 {
 	padding-left: 5px;
 }
 h3 {
-	padding-left: 1ex;
+	// padding-left: 1ex;
 	margin-top: 1ex;
 }
 
@@ -399,9 +402,13 @@ ul.menu {
 		width: auto;
 		/* margin-bottom: 16px; */
 		/* margin-top: 1px; */
-		margin: 1px 0 16px 1px;
+		margin: 1px 0 16px;
 	}
-	
+
+	.after{
+		margin: 16px 0 0;
+	}
+		
 	h3 {
 		font-size: 16px;
 		font-weight: 400;

@@ -106,9 +106,14 @@
 	</div>
 	<% /each %>
 	<% /def %>
-	<p></p>
+	
 
 </article>
+<% def(imgsearch) %>
+<% else %>
+<div class="after"></div>
+<% /def %>
+
 <!-- 最終更新日時 -->
 <% def(lastmodified) %>
 <p>last modified: <% echo(lastmodified) %></p>
