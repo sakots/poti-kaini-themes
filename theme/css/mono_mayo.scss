@@ -181,6 +181,7 @@ figure {
 }
 figcaption {
 	font-size: smaller;
+	margin: 10px 0;
 }
 ul {
 	list-style-type: none;
@@ -200,6 +201,10 @@ ul.menu {
 	}
 	figure {
 		float: none;
+	}
+	article {
+		display: table;
+		min-width: 250px;
 	}
 }
 .resma {
