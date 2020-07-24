@@ -279,11 +279,18 @@ ul.menu {
 		overflow: hidden;
 	}
 	p {
+		display: table;
 		margin: 0.5ex auto;
 	}
-	img {
+	p a {
+		display: table-cell;
 		width: $cat_img_size;
 		height: $cat_img_size;
+	}
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		vertical-align: middle;
 	}
 }
 .delfo {
