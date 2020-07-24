@@ -2,7 +2,7 @@
 /*! =====このcssファイルはsassから生成されています。===== */
 
 //設定ファイルの読み込み
-@import "mono_conf";
+@import "mono_main_conf";
 
 //リセット
 * {
@@ -72,7 +72,7 @@ footer > article {
 		text-align: right;
 	}
 }
-footer>article.copy {
+footer > article.copy {
 	@extend header;
 	text-align: right;
 }
@@ -160,7 +160,6 @@ em.thispage {
 .name:hover {
     background-color: $ushiro;
 }
-
 
 h2 {
 	border-left: solid 1ex $border;
@@ -330,8 +329,8 @@ ul.menu {
 		font-family: "Hiragino Sans", meiryo, ヒラギノ角ゴシック, メイリオ, sans-serif;
 		font-size: 16px;
 		line-height: 150%;
-		color: #000;
-		background-color:$ushiro;
+		color: $search_body_color;
+		background-color: $search_body_background-color;
 		letter-spacing: .08em
 	}
 	
@@ -342,15 +341,15 @@ ul.menu {
 	}
 	
 	.title {
-		color: #000;
-		background-color: #9CF;
-		border-left: 8px solid #33F;
+		color: $search_title_color;
+		background-color: $search_title_background-color;
+		border-left: 8px solid $search_title_border-left;
 		padding: 6px 5px 2px;
 		margin: 0 0 10px
 	}
 	
 	a {
-		color: #003;
+		color: $search_a_color;
 		text-decoration: underline
 	}
 	
@@ -407,8 +406,6 @@ ul.menu {
 	.leftbox,
 	.rightbox {
 		width: auto;
-		/* margin-bottom: 16px; */
-		/* margin-top: 1px; */
 		margin: 1px 0 16px;
 	}
 
@@ -430,16 +427,17 @@ ul.menu {
 		height: 20px;
 		width: 180px;
 		border: 1px solid;
-		border-color: #003 #66F #66F #003;
-		background-color: #FFF;
+		color: $search_input_text_color;
+		border-color: $search_input_text_border-color;
+		background-color: $search_input_text_background-color;
 		vertical-align: middle
 	}
 	
 	input[type=submit] {
-		color: #000;
+		color: $search_input_submit_color;
 		border: 1px solid;
-		border-color:  #66F #003 #003 #66F;
-		background-color: #DDF;
+		border-color: $search_input_submit_border-color;
+		background-color: $search_input_submit_background-color;
 		vertical-align: middle
 	}
 	
@@ -450,21 +448,21 @@ ul.menu {
 	
 	.name {
 		font-weight: 700;
-		color: #000;
+		color: $search_name_color;
 		display: inline-block;
-		border: 1px solid #336;
+		border: 1px solid $search_name_border-color;
 		border-radius: 6px;
 		line-height: 1em;
 	}
 	
 	.name a {
-		color: #003;
+		color: $search_name_a_color;
 		display: block;
 		padding: 5px;
 	}
 	
 	.name:hover {
-		background-color: #DDF
+		background-color: $search_name_hover;
 	}
 	
 	.comments_title_wrap a {
@@ -473,31 +471,31 @@ ul.menu {
 	
 	.res_button_wrap {
 		text-align: right;
-		margin: 8px 0 -8px
+		margin: 8px 0 -8px;
 	}
 	
 	.res_button form {
-		display: inherit
+		display: inherit;
 	}
 	
 	.res_button_wrap form {
 		display: inline-block;
 		width: 200px;
-		vertical-align: inherit
+		vertical-align: inherit;
 	}
 	
 	.page_top {
 		display: inline-block;
 		margin: 0 0 0 6px;
-		vertical-align: -webkit-baseline-middle
+		vertical-align: -webkit-baseline-middle;
 	}
 	
 	.res_button {
-		width: 5em
+		width: 5em;
 	}
 	
 	.res_button:hover {
-		background-color: #EEF
+		background-color: $search_res_button_hover;
 	}
 	
 	.comments_title_wrap {
@@ -515,73 +513,65 @@ ul.menu {
 	}
 
 	input[type=text]:hover {
-		background-color: #EEF
+		background-color: $search_input_text_hover;
 	}
 	
 	input[type=radio] {
-		display: none
+		display: none;
 	}
 	
 	.label {
-		color: #333;
+		color: $search_label_color;
 		display: inline-block;
 		padding: 0 10px;
 		text-align: center;
 		cursor: pointer;
-		border: 2px solid #66C;
-		border-radius: 15px
+		border: 2px solid $search_label_border-color;
+		border-radius: 15px;
 	}
 	
 	input[type=radio]:checked+label {
 		color: #000;
-		background: #DDF
+		background: $search_checked_radio_background-color;
 	}
 	
 	.label:hover {
-		background-color: #EEF
+		background-color: $search_label_hover_background-color;
 	}
 	
 	.radio {
 		display: inline-block;
-		margin: 0 0 16px 0
+		margin: 0 0 16px 0;
 	}
+
 	@media screen and (max-width:967px) {
 		#main {
-			width: 736px
+			width: 736px;
 		}
 		.newimg li:nth-of-type(5n) {
-			margin-right: 5px
+			margin-right: 5px;
 		}
-	
 		.newimg li:nth-of-type(4n) {
-			margin-right: 0
+			margin-right: 0;
 		}
-	
 	}
 	
 	@media screen and (max-width:767px) {
 		#main {
-			width: 100%
+			width: 100%;
 		}
 		.newimg {
-			padding: 5px 0 0 0
+			padding: 5px 0 0 0;
 		}
-	
 		.catalog {
-			width: 24.2%
+			width: 24.2%;
+			margin: 0 1.0666% 3px 0;
 		}
-	
-		.catalog {
-			margin: 0 1.0666% 3px 0
-		}
-	
 		.newimg li:nth-of-type(5n) {
-			margin-right: 1.0666%
+			margin-right: 1.0666%;
 		}
-	
 		.newimg li:nth-of-type(4n) {
-			margin-right: 0
+			margin-right: 0;
 		}
-	
 	}
 }
