@@ -66,7 +66,9 @@
 				<nav class="menu">
 					<% def(resno) %><a href="<% echo(self2) %>"><i class="fas fa-star fa-fw fa-lg" title="トップ"></i>トップ</a><% /def %>
 					<a href="<% echo(home) %>" target="_top"><i class="fas fa-home fa-fw fa-lg" title="ホーム"></i>ホーム</a>
+					<% def(for_new_post) %>
 					<a href="<% echo(self) %>?mode=newpost"><i class="fas fa-pen-square fa-fw fa-lg" title="投稿"></i>投稿</a>
+					<% /def %>
 					<a href="<% echo(self) %>?mode=admin"><i class="fas fa-cog fa-fw fa-lg" title="管理モード"></i>管理モード</a>
 					<a href="<% echo(self) %>?mode=catalog"><i class="fas fa-table fa-fw fa-lg" title="カタログ"></i>カタログ</a>
 					<a href="<% echo(self) %>?mode=piccom<% def(resno) %>&amp;resto=<% echo(resno) %><% /def %>"><i class="fas fa-paste fa-fw fa-lg" title="投稿途中の絵"></i>投稿途中の絵</a>
