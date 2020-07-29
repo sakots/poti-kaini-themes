@@ -40,7 +40,9 @@
 			<article>
 				<p class="menu">
 					<a href="<% echo(home) %>" target="_top"><i class="fas fa-home fa-fw fa-lg" title="ホーム"></i>ホーム</a>
+					<% def(for_new_post) %>
 					<a href="<% echo(self) %>?mode=newpost"><i class="fas fa-pen-square fa-fw fa-lg" title="投稿"></i>投稿</a>
+					<% /def %>
 					<a href="<% echo(self) %>?mode=admin"><i class="fas fa-cog fa-fw fa-lg" title="管理モード"></i>管理モード</a>
 					<a href="<% echo(self2) %>"><i class="fas fa-list fa-fw fa-lg" title="標準モード"></i>標準モード</a>
 					<a href="#footer"><i class="fas fa-angle-double-down fa-fw fa-lg" title="一番下へ"></i></a>

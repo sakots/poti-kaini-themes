@@ -40,7 +40,9 @@
 				<p class="menu">
 					<a href="<% echo(self2) %>"><i class="fas fa-star fa-fw fa-lg" title="トップ"></i>トップ</a>
 					<a href="<% echo(home) %>" target="_top"><i class="fas fa-home fa-fw fa-lg" title="ホーム"></i>ホーム</a>
+					<% def(for_new_post) %>
 					<a href="<% echo(self) %>?mode=newpost"><i class="fas fa-pen-square fa-fw fa-lg" title="投稿"></i>投稿</a>
+					<% /def %>
 					<a href="<% echo(self) %>?mode=admin"><i class="fas fa-cog fa-fw fa-lg" title="管理モード"></i>管理モード</a>
 				</p>
 			</article>
@@ -162,7 +164,7 @@
 							<% /def %>
 							<% def(rewrite) %>
 							<li>編集では クッキーは保存されません。さらにsageを入れても位置は変わりません。</li>
-							<li>トリップは 再生成されるので、名前を変更しない場合は 未入力(空白)にしてください。</li>
+							<!-- <li>トリップは 再生成されるので、名前を変更しない場合は 未入力(空白)にしてください。</li> -->
 							<li>最大投稿データ量は <% echo(maxkb) %> KB までです。sage機能付き。</li>
 							<% /def %>
 						</ul>
