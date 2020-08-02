@@ -151,6 +151,14 @@ em.thispage {
   background-color: $ushiro;
 }
 
+h1 + div {
+  text-align: right;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
 h2 {
   border-left: solid 1ex $border;
   background-color: $th_bg;
