@@ -70,6 +70,7 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 - echo(oya/com) - 親記事のコメントです。
 - def(oya/limit) - 「もうすぐ消える記事」のチェックです。
 - def(oya/skipres) - レスが省略されているかのチェックです。
+- def(oya/disp_resform) - ミニレスフォームを表示するかどうかのチェックです。
 - each(oya/res) - スレッドのレスです。
 - def(oya/res/src) - レスに画像があるかのチェックです。
 - 以下、oya/res/... はスレッドの中でのものになりますので省略します。
@@ -87,7 +88,7 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 
 - def(paint_mode) - お絵かきモードの時のチェックです。
 - def(continue_mode) - 続きを描く時のモードのチェックです。
-- def(type_neo) - 動画再生のときにneoのpchでもCheerpJが起動する事があるため、ファイルの中身を確認する処理です。Java版ならFalseになります。
+- def(type_neo) - 動画再生のときにneoのpchでもCheerpJが起動する事があるためファイルの中身を確認する処理です。NEOならTrue、Java版ならFalseになります。
 - echo(w),echo(h) - アプレットスクリプトの幅と高さです。
 - echo(picw),echo(pich) - キャンバスの幅と高さです。
 - 以下アプレットスクリプト内の説明は今は省略させてください…
@@ -111,6 +112,8 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 - <% each(y) %><% each(y/x) %><% def(y/x/no) %>…　呪文です。tableタグを使用してカタログ表示をしていたころの名残があるためとてもややこしいです。デフォルトスキンではcssのflexboxを使ってカタログモードを表現しています。でも頑張って説明する。
 - <% each(y) %><% each(y/x) %> - まとめて「y * x の回数だけ繰り返す」ということです。分離すればtableタグに使えますがさらにややこしくなるのでオススメしません。
 - echo(y/x/no),echo(y/x/sub)... - 他のnoやsubとだいたい同じです。記事の番号やタイトルが返ってきます。
+- <% echo(y/x/rescount) %> - レス数を表示します。
+
 
 ### other.htmlで使っているもの
 
