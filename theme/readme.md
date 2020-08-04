@@ -31,7 +31,8 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 - echo(rooturl) - 掲示板の設置URLです。ツイッターカードなどで使います。
 - echo(self) - スクリプト自身の名前です。通常はpotiboard.phpです。
 - echo(self2) - 入口の名前です。なにも変更していなければindex.htmlとなっています。
-- def(applet) - 「お絵かきアプレットを使用する場合」です。
+- def(paint) - お絵かき機能を使う時。
+- def(applet) - 「しぃペインター」を使う時。
 - def(paint2) - 「お絵かき機能を使用する お絵かきのみ」(define('USE_PAINT', '2');)の設定の場合です。
 - echo(pdefw) - デフォルトのお絵かきサイズ幅です。
 - echo(pdefh) - デフォルトのお絵かきサイズ高さです。
