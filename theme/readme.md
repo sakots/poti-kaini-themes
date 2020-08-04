@@ -112,7 +112,7 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 - <% each(y) %><% each(y/x) %><% def(y/x/no) %>…　呪文です。tableタグを使用してカタログ表示をしていたころの名残があるためとてもややこしいです。デフォルトスキンではcssのflexboxを使ってカタログモードを表現しています。でも頑張って説明する。
 - <% each(y) %><% each(y/x) %> - まとめて「y * x の回数だけ繰り返す」ということです。分離すればtableタグに使えますがさらにややこしくなるのでオススメしません。
 - echo(y/x/no),echo(y/x/sub)... - 他のnoやsubとだいたい同じです。記事の番号やタイトルが返ってきます。
-- <% echo(y/x/rescount) %> - レス数を表示します。
+- echo(y/x/rescount) - レス数を表示します。
 
 
 ### other.htmlで使っているもの
