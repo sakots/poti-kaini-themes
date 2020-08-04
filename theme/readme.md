@@ -70,7 +70,7 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 - echo(oya/com) - 親記事のコメントです。
 - def(oya/limit) - 「もうすぐ消える記事」のチェックです。
 - def(oya/skipres) - レスが省略されているかのチェックです。
-- def(oya/disp_resform) - ミニレスフォームを表示するかどうかのチェックです。
+- def(oya/disp_resform) - ミニレスフォームを表示するかのチェックです。
 - each(oya/res) - スレッドのレスです。
 - def(oya/res/src) - レスに画像があるかのチェックです。
 - 以下、oya/res/... はスレッドの中でのものになりますので省略します。
