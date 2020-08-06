@@ -34,6 +34,7 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 - def(paint) - お絵かき機能を使う時。
 - def(applet) - 「しぃペインター」を使う時。
 - def(paint2) - 「お絵かき機能を使用する お絵かきのみ」(define('USE_PAINT', '2');)の設定の場合です。
+- def(for_new_post) - 新規投稿フォームからの投稿が有効な設定の時にTrueが入ります。
 - echo(pdefw) - デフォルトのお絵かきサイズ幅です。
 - echo(pdefh) - デフォルトのお絵かきサイズ高さです。
 - def(anime) - 動画記録を使用するかどうかです。
