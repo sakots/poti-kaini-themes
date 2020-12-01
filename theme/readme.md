@@ -32,7 +32,7 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 - echo(self) - スクリプト自身の名前です。通常はpotiboard.phpです。
 - echo(self2) - 入口の名前です。なにも変更していなければindex.htmlとなっています。
 - def(paint) - お絵かき機能を使う時。
-- def(applet) - 「しぃペインター」を使う時。
+- def(applet) - applet選択画面を出す時。PaintBBSに加えしぃペインターも使う設定にしたときにTrueが入ります。
 - def(paint2) - 「お絵かき機能を使用する お絵かきのみ」(define('USE_PAINT', '2');)の設定の場合です。
 - def(for_new_post) - 新規投稿フォームからの投稿が有効な設定の時にTrueが入ります。
 - echo(pdefw) - デフォルトのお絵かきサイズ幅です。
@@ -40,6 +40,7 @@ Skinnyのタグは[本家](http://skinny.sx68.net/tag/taglist.html)を見てい�
 - def(anime) - 動画記録を使用するかどうかです。
 - echo(animechk) - 動画記録をデフォルトで使用するかどうかです。
 - def(form) - 通常投稿フォームを使用するかどうかです。
+- def(hide_the_checkbox_for_nofile)  -  画像なしのチェックボックスを使わない設定の時にTrueが入ります。
 - echo(maxbyte) - 投稿できる最大ファイルサイズです。
 - echo(usename) - 名前が必要な場合のマークです。
 - echo(usesub) - タイトルが必要な場合のマークです。
