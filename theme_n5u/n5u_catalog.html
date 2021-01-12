@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="<% echo(charset) %>">
+		<title><% echo(title) %></title>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="<% echo(skindir) %>css/n5u.css" type="text/css">
+		<script type="text/javascript" src="loadcookie.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1><a href="<% echo(self2) %>"><% echo(title) %></a></h1>
+			<div>
+				<a href="<% echo(home) %>" target="_top">[ホーム]</a>
+				<a href="<% echo(self) %>?mode=admin">[管理モード]</a>
+			</div>
+			<section>
+				<p>
+					<% def(for_new_post) %>
+					<a href="<% echo(self) %>?mode=newpost">[投稿]</a>
+					<% /def %>
+					<a href="<% echo(self) %>">[通常モード]</a>
+				</p>
+				<h2>カタログモード</h2>
+				<% def(paint) %>
+				<section class="epost">
+					<form action="<% echo(self) %>" method="post" enctype="multipart/form-data">
+						<p>
+							<input class="button" type="submit" value="お絵かき">
+							<% def(applet) %><input type="hidden" name="shi" value="1"><% /def %>
+							<label>幅：<input class="form" type="text" name="picw" value="<% echo(pdefw) %>" size="4"></label>
+							<label>高さ：<input class="form" type="text" name="pich" value="<% echo(pdefh) %>" size="4"></label>
+							<% def(resno) %><input type="hidden" name="resto" value="<% echo(resno) %>"><% /def %>
+							<% def(anime) %><label><input type="checkbox" value="true" name="anime" title="動画記録" <% def(animechk) %><% echo(animechk) %><% /def %>>アニメーション記録</label><% /def %>
+							<label><input type="checkbox" name="useneo" checked>USE NEO</label>
+							<input type="hidden" name="mode" value="paint">
+						</p>
+					</form>
+					<% def(paint2) %>
+					<ul>
+						<li>お絵かきできる画像のサイズは横 300～<% echo (pmaxw) %>、縦 300～<% echo (pmaxh) %>の範囲内です。</li>
+						<li>画像は横 <% echo (maxw) %>ピクセル、縦 <% echo (maxh) %>ピクセルを超えると縮小表示されます。</li>
+						<li>USE NEOのチェックが入っていればPaintBBS NEOが、そうでなければしぃペインターが起動します。</li>
+						<% def(addinfo) %><% echo (addinfo) %><% /def %>
+					</ul>
+					<% /def %>
+				</section>
+				<% /def %>
+			</section>
+		</header>
+		<main>
+			<section id="catalog">
+				<% each(y) %><% each(y/x) %><% def(y/x/no) %>
+				<div>
+					<% def(y/x/imgsrc) %>
+					<p><a href="<% echo(self) %>?res=<% echo(y/x/no) %>" title="<% echo(y/x/sub) %> (by <% echo(y/x/name) %><% echo(y/x/trip) %>)"><img src="<% echo(y/x/imgsrc) %>" alt="<% echo(y/x/sub) %> (by <% echo(y/x/name) %><% echo(y/x/trip) %>)"></a></p>
+					<% /def %>
+					<% def(y/x/txt) %>
+					<p><a href="<% echo(self) %>?res=<% echo(y/x/no) %>" title="<% echo(y/x/sub) %> (by <% echo(y/x/name) %><% echo(y/x/trip) %>)"><% echo(y/x/sub) %> (by <% echo(y/x/name) %><% echo(y/x/trip) %>)</a></p>
+					<% /def %>
+					<p>[<% echo(y/x/no) %>] <% echo(y/x/now) %><% def(y/x/updatemark) %><% echo(y/x/updatemark) %><% /def %><% def(y/x/id) %> ID:<% echo(y/x/id) %><% /def %></p>
+				</div>
+				<% /def %><% /each %><% /each %>
+			</section>
+			<section>
+				<form class="delf" action="<% echo(self) %>" method="post">
+					<p>
+						No <input class="form" type="text" name="del[]" size="4" value="">
+						Pass <input class="form" type="password" name="pwd" size="6" value="">
+						<select class="form" name="mode">
+							<option value="edit" selected>編集</option>
+							<% def(userdel) %>
+							<option value="usrdel">削除</option>
+							<% /def %>
+						</select>
+						<input class="button" type="submit" value=" OK ">
+					</p>
+				</form>
+				<% def(notres) %>
+				<p class="page">
+					<% def(prev) %><a href="<% echo(prev) %>">&lt;&lt;[BACK]</a><% elsedef %>[START]<% /def %>
+					<% echo(paging) %>
+					<% def(next) %><a href="<% echo(next) %>">[NEXT]&gt;&gt;</a><% elsedef %>[END]<% /def %>
+				</p>
+				<% /def %>
+			</section>
+			<script type="text/javascript">
+				l(); //LoadCookie
+			</script>
+		</main>
+		<footer>
+			<!--著作権表示 削除しないでください-->
+			<!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- POTI-board -->
+			<p>
+				<a href="https://poti-k.info/" target="_top" title="POTI-board改二 <% echo(verlot) %>">POTI-board改二 <% echo(ver) %></a>
+				Web Style by <a href="https://poti-k.info/" target="_top" title="n5u <% echo(tver) %>">n5u</a>
+			</p>
+			<p>
+				OriginalScript -
+				<a href="http://www.punyu.net/" target="_top" title="POTI-board (by PunyuNet)">POTI-board</a>
+				<a href="http://www.2chan.net/" target="_top" title="futaba.php v0.8 lot.031015 (by futaba)">futaba.php</a>
+				(<a href="http://php.loglog.jp/" target="_top" title="gazou.php v3.0 (by Let's PHP!)">gazou.php</a>custom )
+			</p>
+			<% def(paint) %>
+			<p>
+				OekakiApplet - <a href="http://hp.vector.co.jp/authors/VA016309/" target="_blank" rel="noopener noreferrer" title="by しぃちゃん">Shi-Painter</a>
+			</p>
+			<% /def %>
+			<p>
+				UseFunction -
+				<a href="http://skinny.sx68.net/" target="_top" title="Skinny.php (by Kuasuki)">Skinny.php</a>
+				DynamicPalette <!-- http://wondercatstudio.com/ -->
+				<a href="https://github.com/funige/neo/" target="_top" title="by ImageCanvas">PaintBBS NEO</a>
+			</p>
+		</footer>
+	</body>
+</html>

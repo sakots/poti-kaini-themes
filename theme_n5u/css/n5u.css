@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "n5u_main.css";
+
+.NEO .color_bk { color: #FFF;}
+.NEO .color_bk2 { color: #FCC;}
+.NEO .color_tool_icon { color: #FFF;}
+.NEO .color_icon { color: #FCC;}
+.NEO .color_iconselect { color: #FCC;}
+.NEO .color_text { color: #FFF;}
+.NEO .color_bar { color: #555;}
+.NEO .tool_color_button { color: #FCC;}
+.NEO .tool_color_button2 { color: #DBB;}
+.NEO .tool_color_text { color: #555;}
+.NEO .tool_color_bar { color: #FCC;}
+.NEO .tool_color_frame { color: #C00;}
