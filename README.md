@@ -4,6 +4,10 @@
 
 ## 更新履歴
 
+### [2021/02/13] 各テーマのtemplate_ini.php
+
+- アニメファイルアップロード時のエラーメッセージをtemplate_ini.phpで設定できるようにした。
+
 ### [2021/02/10] 各テーマのtemplate_ini.php
 
 - MSG040に「管理者パスワードが設定されていません。[admin password is not set.]」が定義されました。
